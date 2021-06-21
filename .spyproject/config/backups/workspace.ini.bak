@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['C:\\Users\\Varun Kohli\\.spyder-py3\\temp.py', 'daily1.py']
+recent_files = ['ST02_CovCorSkewKurt.py', 'LG02_admission.py', 'ST03_outliers.py']
 

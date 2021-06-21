@@ -2,7 +2,7 @@
 #-----------------------------
 #Data Structures
 #List - ordered collection of items, mutable(changeable) : [square ]
-list1 = [1,2,3,4,5,'a','Dhiraj',"Upadhyaya",True]  #list type of object with data
+list1 = [1,2,3,4,5,'a','Varun',"Kohli",True]  #list type of object with data
 list1  #print when through spyder
 type(list1)  #type of object
 print(list1)  #print when running complete file
@@ -21,7 +21,7 @@ list2
 list2[2]  #index starts from 0,1,...
 list2[2] = 'Z'  #list is mutable, ie. values can be changed
 list2
-#%%mutatble - changed, immutable- cannot be changed
+#%%mutable - changed, immutable- cannot be changed
 #tuple - multiple type of objects like list, immutable: ( round brackets) : no changes
 tuple1 = (1, 2, 'a', 'b')
 tuple1
@@ -75,6 +75,10 @@ type(set2)
 print(set2)
 dir(set2)  #functions in set, cannot be subscript set2[1]
 
+set3 = set(['a','b','c','a'])
+set3
+set4 = set(list2)
+set4
 #%%%frozen ( round bracket, comma)
 #frozen set- accepts iterable object as input parameter.
 tupleFZ1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9) 
@@ -103,7 +107,7 @@ dir(str)
 str2[1] = 'Z' #immutable , but new string can be assigned
 str2 = 'Dhiraj'
 str2
-
+str2.upper()
 #list, tuple, dictionary, set, strings.
 #%% - Sequence
 #sequence - tuple and list are used
@@ -116,11 +120,14 @@ for i in list1:
 
   
 for i in list1:    print(i , end ='\t')
-print?  #help
+help(print)  #help
+
+#print #select the word and press cntrl+i to seek help
+
 for i in list2:    print(i, 'DU' , sep='-' , end ='xxx')
 #a-DU-xxx ; i+sep+end
-for i in list1:    print(i , 'HHHE', sep=' X ' , end ='\t')
-print?
+for i in list1:    print(i , 'varun', sep=' X ' , end ='\t')
+
 for i in list1:    print('Dhiraj ', i + 6)
 
 tuple1 = (1, 2, 'a', 'b')
@@ -130,7 +137,7 @@ list5
 for i in tuple1:    print(i, end ='\t')
 range?  # start, stop, step; does not take keyword
 range(1, 100, 2)  #nothing happens, though it generates 
-for i in range(1, 100, 2):    print(i, end=' ')
+for i in range(1, 100, 3):    print(i, end=' ')
 
 #odd nos between x & y    
 
@@ -164,10 +171,14 @@ import numpy as np #np is alias
 np1 = np.arange(1,10)
 np1
 
+dir(numpy)
+help(numpy.array)
+
 x=np.arange(start=1,stop=1000000,step=2)
 len(x)
-x[1:100]
-x[1:50:10]
+x
+x[0:100]
+x[0:50:5]
 np
 np.mean(np.arange(1,10000000))
 np1
@@ -186,8 +197,8 @@ np3 = np.array([[1,4],[3,1],[5,6],[10,50]])
 np3
 np3.shape
 
-np3.reshape((-1,1))  #1 column from 2 column
-
+np3.reshape((-1,1)).shape  #1 column from 2 column
+np3.reshape((-1,4))
 #http://cs231n.github.io/python-numpy-tutorial/
 #%% #pandas - dataframe, excel like
 #https://mode.com/python-tutorial/pandas-dataframe/
@@ -266,7 +277,7 @@ data2a
 data2a = pd.read_csv('mtcars.csv') #when csv is in project folder
 data2a
 data2b
-data2b = pd.read_csv('E:/analytics/projects/pyanalytics/mtcars.csv')
+data2b = pd.read_csv('E:/analytics/projects/pyAnalytics/mtcars.csv')
 data2b
 #csv in any other location - full path
 data2b
